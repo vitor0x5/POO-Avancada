@@ -1,4 +1,5 @@
-# Aplicando o Princípio da Responsabilidade Única 
+# O Princípio da Responsabilidade Única 
+Por: Vitor Hugo Guilherme
 ________________________
 
 #### Todo desenvolvedor ja se deparou com esse dilema: *como atualizar uma funcionalidade sem quebrar toda a aplicação*?

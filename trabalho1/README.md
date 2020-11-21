@@ -1,7 +1,7 @@
 # Aplicando o Princípio da Responsabilidade Única 
 ________________________
 
-##### Todo desenvolvedor ja se deparou com esse dilema: *como atualizar uma funcionalidade sem quebrar toda a aplicação*?
+#### Todo desenvolvedor ja se deparou com esse dilema: *como atualizar uma funcionalidade sem quebrar toda a aplicação*?
 
  Muitas vezes acaba sendo mais fácil refazer todo o código e evitar as dores de cabeça. Mas porque isso acontece? Robert C. Martin (ou Uncle Bob) uma das cabeças por trás do [Manifesto Ágil](https://agilemanifesto.org/iso/ptbr/manifesto.html), apresentou ao mundo os 5 princípios [SOLID](https://www.eduardopires.net.br/2013/04/orientacao-a-objeto-solid/#:~:text=SOLID%20%C3%A9%20um%20acr%C3%B4nimo%20dos,poderiam%20se%20encaixar%20nesta%20palavra.) para programação orientada a objetos. Esse artigo abordará o primeiro deles: *O Princípio da Responsabilidade Única.*
 *****************************

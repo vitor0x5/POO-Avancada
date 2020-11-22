@@ -2,9 +2,9 @@
 Por: Vitor Hugo Guilherme
 ________________________
 
-#### Todo desenvolvedor ja se deparou com esse dilema: *como atualizar uma funcionalidade sem quebrar toda a aplicação*?
+#### Todo desenvolvedor já se deparou com esse dilema: *como atualizar uma funcionalidade sem quebrar toda a aplicação*?
 
- Muitas vezes acaba sendo mais fácil refazer todo o código e evitar as dores de cabeça. Mas porque isso acontece? Robert C. Martin (ou Uncle Bob) uma das cabeças por trás do [Manifesto Ágil](https://agilemanifesto.org/iso/ptbr/manifesto.html), apresentou ao mundo os 5 princípios [SOLID](https://www.eduardopires.net.br/2013/04/orientacao-a-objeto-solid/#:~:text=SOLID%20%C3%A9%20um%20acr%C3%B4nimo%20dos,poderiam%20se%20encaixar%20nesta%20palavra.) para programação orientada a objetos. Esse artigo abordará o primeiro deles: *O Princípio da Responsabilidade Única.*
+ Muitas vezes acaba sendo mais fácil refazer todo o código e evitar as dores de cabeça. Mas por que isso acontece? Robert C. Martin (ou Uncle Bob) uma das cabeças por trás do [Manifesto Ágil](https://agilemanifesto.org/iso/ptbr/manifesto.html), apresentou ao mundo os 5 princípios [SOLID](https://www.eduardopires.net.br/2013/04/orientacao-a-objeto-solid/#:~:text=SOLID%20%C3%A9%20um%20acr%C3%B4nimo%20dos,poderiam%20se%20encaixar%20nesta%20palavra.) para programação orientada a objetos. Esse artigo abordará o primeiro deles: *O Princípio da Responsabilidade Única.*
 *****************************
 
 #### O que é?
@@ -79,7 +79,7 @@ Todo programador passou por isso ao menos uma vez na vida e sabe muito bem que a
 ******************
 
 #### Aplicando o Princípio da Responsabilidade Única
-Primeiramente é importante remover toda a lógica relacionada a persistência de dados de dentro da classe criando um repositório.
+Primeiramente é importante remover toda a lógica relacionada à persistência de dados de dentro da classe criando um repositório.
 ```
 import { uuid } from 'uuidv4';
 
@@ -159,7 +159,7 @@ export default class HorarioManipulator {
 }
 
 ```
-Essa é mais uma classe que obedece o Princípio de Responsabilidade Única. Agora é possível alterar as regras de negócio relacionadas à esse dominio da aplicação sem interferir nos outros.
+Essa é mais uma classe que obedece o Princípio de Responsabilidade Única. Agora é possível alterar as regras de negócio relacionadas a esse dominio da aplicação sem interferir nos outros.
 Por fim, a classe Agenda ficou assim:
 ```
 import AgendaRepositorio from './AgendaRepositorio';
@@ -172,4 +172,4 @@ export default class Agenda {
 ```
 *******************
 #### Conclusão
-Programar é mais que cumprir os requisitos da aplicação, é necessário seguir padrões e pensar sempre em possiveis alterações e novos recursos. E o Princípio de Responsabilidade Única é um desses padrões que todo programador deve seguir se quiser construir códigos escaláveis e de fácil compreensão.
+Programar é mais que cumprir os requisitos da aplicação, é necessário seguir padrões e pensar sempre em possíveis alterações e novos recursos. E o Princípio de Responsabilidade Única é um desses padrões que todo programador deve seguir se quiser construir códigos escaláveis e de fácil compreensão.

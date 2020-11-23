@@ -8,7 +8,7 @@ ________________________
 *****************************
 
 #### O que é?
- O Princípio da Responsabilidade Única define que uma classe, módulo ou função deve ter apenas um motivo para mudar. Ou seja, cada "fragmento" de código deve executar uma função específica que quando alterada não interfere no resto da aplicação. Dessa forma o propgramador pode trabalhar em pequenos escopos da aplicação e não precisa conhecer todo o código para fazer pequenos ajustes.
+ O Princípio da Responsabilidade Única define que uma classe, módulo ou função deve ter apenas um motivo para mudar. Ou seja, cada "fragmento" de código deve executar uma função específica que quando alterada não interfere no resto da aplicação. Dessa forma o programador pode trabalhar em pequenos escopos da aplicação e não precisa conhecer todo o código para fazer pequenos ajustes.
  ***************************
 
  #### Ok, mas e o código?

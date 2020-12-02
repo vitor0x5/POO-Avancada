@@ -1,4 +1,4 @@
-package writter;
+package utils.writter;
 
 public interface IWriter {
     public void print(String text);

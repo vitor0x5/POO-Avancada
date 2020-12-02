@@ -1,6 +1,6 @@
 package algorithms.CSV.CSVWriter;
 
-import writter.Writer;
+import utils.writter.Writer;
 import java.io.IOException;
 
 public class CSVWriter implements ICSVWriter {

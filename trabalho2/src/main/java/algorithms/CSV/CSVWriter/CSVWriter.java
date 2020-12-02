@@ -1,24 +1,24 @@
 package algorithms.CSV.CSVWriter;
 
-import utils.writter.Writer;
+import utils.writter.CustomFileWriter;
 import java.io.IOException;
 
 public class CSVWriter implements ICSVWriter {
-    private Writer writer;
+    private CustomFileWriter fileWriter;
 
     public CSVWriter(String fileName) throws IOException {
-        this.writer = new Writer(fileName + ".csv");
+        this.fileWriter = new CustomFileWriter(fileName + ".csv");
     }
 
     @Override
     public void addLine(String[] values) {
         for (String value: values) {
-            this.writer.print(value);
+            this.fileWriter.print(value);
             // Se não for o último elemento
             if(!value.equals(values[values.length -1])) {
-                this.writer.print(";");
+                this.fileWriter.print(";");
             }
         }
-        this.writer.print("\n");
+        this.fileWriter.print("\n");
     }
 }

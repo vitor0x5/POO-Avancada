@@ -7,5 +7,5 @@ import org.jsoup.nodes.Document;
 import java.util.List;
 
 public interface IFindNewsStrategy {
-    public List<News> run(NewsSelector selector, Document doc);
+    List<News> run(NewsSelector selector, Document doc);
 }

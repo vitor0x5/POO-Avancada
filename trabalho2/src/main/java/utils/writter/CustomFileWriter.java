@@ -5,11 +5,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Writer implements IWriter {
+public class CustomFileWriter implements IWriter {
     private final PrintWriter pw;
 
-    public Writer(String fileName) throws IOException {
-        this.pw = new PrintWriter(new FileWriter(new File(fileName)));
+    public CustomFileWriter(String fileName) throws IOException {
+        this.pw = new PrintWriter(new java.io.FileWriter(new File(fileName)));
     }
 
     @Override

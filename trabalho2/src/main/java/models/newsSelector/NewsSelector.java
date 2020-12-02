@@ -1,6 +1,6 @@
 package models.newsSelector;
 
-public abstract class NewsSelector {
+public class NewsSelector {
     private final String selector;    //The css id of the news type
     private final String newsType;
 

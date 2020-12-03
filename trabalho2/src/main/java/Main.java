@@ -1,4 +1,5 @@
 import algorithms.CSV.NewsToCSV;
+import algorithms.consoleWriter.NewsToConsole;
 import models.news.News;
 import algorithms.CSV.CSVWriter.CSVWriter;
 import siteParsers.globoParser.GloboParser;
@@ -20,8 +21,9 @@ public class Main {
             List<News> globoNews = globoParser.getAllNews();
 
             NewsToCSV.createCSV(fileName, globoNews);
+            NewsToConsole.writeToConsole(globoNews);
         }else{
-            System.out.println("F");
+            System.out.println("Falha na conexão com o site");
         }
     }
 }

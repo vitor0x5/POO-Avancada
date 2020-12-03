@@ -21,7 +21,7 @@ public class UolParser extends BaseSiteParser {
         this.setNewsSelector("h2.titulo", "Secundário");
     }
 
-    // Get all news from this site
+    //Obtem todas noticias deste site
     @Override
     public List<News> getAllNews() {
         List<News> news = new ArrayList<>();

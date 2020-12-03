@@ -10,6 +10,7 @@ public class CSVWriter implements ICSVWriter {
         this.fileWriter = new CustomFileWriter(fileName + ".csv");
     }
 
+    //Recebe uma vetor de palavras que será inserido por linha no csv
     @Override
     public void addLine(String[] values) {
         for (String value: values) {

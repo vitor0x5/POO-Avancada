@@ -1,16 +1,17 @@
-package siteParsers.uolParser;
+package siteParsers;
 
 import models.news.News;
 import models.newsSelector.NewsSelector;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import siteParsers.IFindNewsStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UolFindNewsStrategy implements IFindNewsStrategy {
+//Cada site devera implementar essa classe
+
+public class BaseFindNewsStrategy  {
 
     // Obtem todas noticias do site
     public List<News> run(NewsSelector selector, Document doc) {

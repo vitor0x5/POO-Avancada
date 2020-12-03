@@ -5,15 +5,15 @@ import models.newsSelector.NewsSelector;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import siteParsers.IFindNewsStrategy;
+import siteParsers.BaseFindNewsStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //Implementacao da estrategia para buscar noticias no site da Globo
-public class GloboFindNewsStrategy implements IFindNewsStrategy {
+public class GloboFindNewsStrategy extends BaseFindNewsStrategy {
 
-    // Obtem todas noticias do site
+    // Exemplo de caso fosse necessario implementar uma estrategia diferente daquele do BaseFindNewsStrategy
     public List<News> run(NewsSelector selector, Document doc) {
         List<News> news = new ArrayList<>();
 

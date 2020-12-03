@@ -3,17 +3,18 @@ package siteParsers.uolParser;
 import models.news.News;
 import models.newsSelector.NewsSelector;
 import siteParsers.BaseSiteParser;
+import siteParsers.BaseFindNewsStrategy;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UolParser extends BaseSiteParser {
 
-    private final UolFindNewsStrategy findNews;
+    private final BaseFindNewsStrategy findNews;
 
     public UolParser() {
         super("https://www.uol.com.br");
 
-        this.findNews = new UolFindNewsStrategy();
+        this.findNews = new BaseFindNewsStrategy();
 
         // Setando seletores do site
         this.setNewsSelector("h1.titulo", "Principal");

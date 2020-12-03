@@ -10,6 +10,7 @@ import java.util.List;
 //Parser do site da Globo
 
 public class GloboParser extends BaseSiteParser {
+
     private final GloboFindNewsStrategy findNews;
 
     public GloboParser() {

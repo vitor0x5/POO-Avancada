@@ -1,28 +1,26 @@
-package siteParsers.globoParser;
+package siteParsers.uolParser;
 
 import models.news.News;
 import models.newsSelector.NewsSelector;
 import siteParsers.BaseSiteParser;
-
 import java.util.ArrayList;
 import java.util.List;
 
-//Parser do site da Globo
+public class UolParser extends BaseSiteParser {
 
-public class GloboParser extends BaseSiteParser {
-    private final GloboFindNewsStrategy findNews;
+    private final UolFindNewsStrategy findNews;
 
-    public GloboParser() {
-        super("https://www.globo.com");
+    public UolParser() {
+        super("https://www.uol.com.br");
 
-        this.findNews = new GloboFindNewsStrategy();
+        this.findNews = new UolFindNewsStrategy();
 
         // Setando seletores do site
-        this.setNewsSelector("p.hui-premium__title", "Principal");
-        this.setNewsSelector("p.hui-highlight-title", "Secundário");
+        this.setNewsSelector("h1.titulo", "Principal");
+        this.setNewsSelector("h2.titulo", "Secundário");
     }
 
-    //Obtem todas noticias do site
+    // Get all news from this site
     @Override
     public List<News> getAllNews() {
         List<News> news = new ArrayList<>();
@@ -42,7 +40,6 @@ public class GloboParser extends BaseSiteParser {
 
         //Percorrendo os seletores do site
         for (NewsSelector s: this.getNewsSelectors()) {
-
             //Verifica se o tipo do titulo encontrado bate com aquele passado como parametro
             if (s.getNewsType().equals(type)) {
                 selector = s;
@@ -55,5 +52,4 @@ public class GloboParser extends BaseSiteParser {
 
         return findNews.run(selector, super.getDoc());
     }
-
 }

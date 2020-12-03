@@ -1,4 +1,4 @@
-package siteParsers.globoParser;
+package siteParsers.uolParser;
 
 import models.news.News;
 import models.newsSelector.NewsSelector;
@@ -10,8 +10,7 @@ import siteParsers.IFindNewsStrategy;
 import java.util.ArrayList;
 import java.util.List;
 
-//Implementacao da estrategia para buscar noticias no site da Globo
-public class GloboFindNewsStrategy implements IFindNewsStrategy {
+public class UolFindNewsStrategy implements IFindNewsStrategy {
 
     // Obtem todas noticias do site
     public List<News> run(NewsSelector selector, Document doc) {
@@ -19,8 +18,11 @@ public class GloboFindNewsStrategy implements IFindNewsStrategy {
 
         Elements titles = doc.select(selector.getselector());
         for (Element t: titles) {
+            //System.out.println(t);
+
             String link = "";
 
+            //Obtendo o pai da classe do titulo que eh do tipo link (a)
             Element parent = t.parent();
             while (parent != null && !parent.tagName().equals("a")) {
                 parent = parent.parent();
@@ -34,6 +36,7 @@ public class GloboFindNewsStrategy implements IFindNewsStrategy {
             news.add(n);
         }
 
+        //System.out.println(news);
         return news;
     }
 }

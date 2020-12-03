@@ -1,10 +1,13 @@
 package models.news;
 
+//Representa uma noticia
+
 public class News {
     private String type;
     private String title;
-    private String link;
+    private String link;       //link da noticia
 
+    //Construtor
     public News(String type, String title, String link ) {
         this.type = type;
         this.title = title;

@@ -9,16 +9,20 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+//Classe abstrata das classes de noticia que é a base para as criacoes das demais
+
 public abstract class BaseSiteParser {
     public final String url;
-    private Document doc;
-    private List<NewsSelector> newsSelectors;
+    private Document doc;                       //Recebe o HTML da pagina
+    private List<NewsSelector> newsSelectors;   //Lista de seletores da pagina
 
+    //Construtor
     public BaseSiteParser(String url) {
         this.newsSelectors = new ArrayList<>();
         this.url = url;
     }
 
+    //Responsavel por obter o html da pagina
     public boolean connect() {
         try {
             this.doc = Jsoup.connect(this.url).get();
@@ -41,6 +45,8 @@ public abstract class BaseSiteParser {
         return this.newsSelectors;
     }
 
+    //Estes metodos precisaram ser implementados a cada nova classe que for extender essa
     public abstract List<News> getAllNews();
     public abstract List<News> getNewsFromOneType(String type);
+
 }

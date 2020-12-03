@@ -10,6 +10,7 @@ import siteParsers.IFindNewsStrategy;
 import java.util.ArrayList;
 import java.util.List;
 
+//Implementacao da estrategia para buscar noticias no site da Globo
 public class GloboFindNewsStrategy implements IFindNewsStrategy {
     // Get all news from a specific selector
     public List<News> run(NewsSelector selector, Document doc) {

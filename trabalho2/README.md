@@ -21,14 +21,14 @@ Esta aplicação tem como objetivo acessar um site de notícias em específico e
 ********************
 * Para utilizar a aplicação basta seguir esses passos:
 1. Abra o projeto em uma IDE Java (Recomendamos o [IntelliJ IDEA](https://www.jetbrains.com/idea/))
-2. Clique no botão build da IDE
-3. Execute a aplicação
+2. Clique no botão build da IDE ![alt text](imagens/build.PNG)
+3. Execute a aplicação          ![alt text](imagens/run.PNG)
 
 * Exemplo..
 
 #### Video Explicativo
 ********************
-
+https://www.youtube.com/watch?v=XdS5uKtL-5I
 
 Referências:
 

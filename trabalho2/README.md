@@ -28,7 +28,7 @@ Esta aplicação tem como objetivo acessar um site de notícias em específico e
 
 #### Video Explicativo
 ********************
-https://www.youtube.com/watch?v=XdS5uKtL-5I
+[![Video Explicativo](https://miro.medium.com/max/800/1*9gS6fNgUZz2xTZe3mUVB_Q.png)](https://www.youtube.com/watch?v=XdS5uKtL-5I)
 
 Referências:
 

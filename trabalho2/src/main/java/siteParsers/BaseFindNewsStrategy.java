@@ -19,7 +19,6 @@ public class BaseFindNewsStrategy  {
 
         Elements titles = doc.select(selector.getselector());
         for (Element t: titles) {
-            //System.out.println(t);
 
             String link = "";
 
@@ -37,7 +36,6 @@ public class BaseFindNewsStrategy  {
             news.add(n);
         }
 
-        //System.out.println(news);
         return news;
     }
 }
